@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Datasets (muy grandes, no subirlos)
+data/
+dataset/
+
+# Resultados de experimentos (pueden regenerarse)
+record/*/
+!record/readme.md
+# Carpetas de resultados de ataques específicos
+badnet_test/
+*_test/
+*_attack/
+
+# Modelos entrenados (muy pesados)
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.pkl
+*.pickle
+
+# EXCEPCIÓN: Si quieres guardar solo los CSV de resultados
+!**/attack_df_summary.csv
+!**/attack_df.csv
+
+# Gráficas generadas (opcional: quita esto si quieres subirlas)
+*.png
+!resource/**/*.png  # Mantener triggers y recursos necesarios
+
+# Logs
+*.log
+wandb/
+runs/
+lightning_logs/
+
+# Temporales y cache
+*.tmp
+.cache/
+.pytest_cache/
+
+# Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Archivos de configuración locales (opcional)
+config/local/

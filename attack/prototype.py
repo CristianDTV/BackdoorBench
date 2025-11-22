@@ -68,7 +68,7 @@ class NormalCase:
         return parser
 
     def add_yaml_to_args(self, args):
-        with open(args.yaml_path, 'r') as f:
+        with open(args.yaml_path, 'r', encoding='utf-8') as f:
             clean_defaults = yaml.safe_load(f)
         clean_defaults.update({k: v for k, v in args.__dict__.items() if v is not None})
         args.__dict__ = clean_defaults

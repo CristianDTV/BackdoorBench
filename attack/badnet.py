@@ -102,7 +102,7 @@ class BadNet(NormalCase):
         return parser
 
     def add_bd_yaml_to_args(self, args):
-        with open(args.bd_yaml_path, 'r') as f:
+        with open(args.bd_yaml_path, 'r', encoding='utf-8') as f:
             mix_defaults = yaml.safe_load(f)
         mix_defaults.update({k: v for k, v in args.__dict__.items() if v is not None})
         args.__dict__ = mix_defaults

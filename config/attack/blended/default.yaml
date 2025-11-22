@@ -1,7 +1,39 @@
+# Attack settings
+attack: blended
 attack_label_trans: all2one
 attack_target: 0
 pratio: 0.1
-attack: blended
 attack_trigger_img_path: ./resource/blended/hello_kitty.jpeg
 attack_train_blended_alpha: 0.2
 attack_test_blended_alpha: 0.2
+
+# Dataset settings
+dataset: cifar10
+dataset_path: ./data/cifar10
+random_seed: 0
+num_classes: 10
+batch_size: 256
+lr: 0.1
+epochs: 100
+
+# Model settings
+model: preactresnet18
+num_workers: 0
+pin_memory: false
+frequency_save: 10
+amp: true
+prefetch: false
+non_blocking: false
+
+# Optimizer settings
+client_optimizer: sgd
+sgd_momentum: 0.9
+wd: 0.0005
+
+# Scheduler settings
+lr_scheduler: MultiStepLR
+steplr_milestones: [50, 75]
+steplr_gamma: 0.1
+
+# Device
+device: cuda:0
